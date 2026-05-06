@@ -440,10 +440,10 @@ section {
     box-shadow: 0 20px 60px rgba(198, 85, 232, .12);
 }
 
-.cards > .card:nth-child(1) { transition-delay: 0s; }
-.cards > .card:nth-child(2) { transition-delay: .05s; }
-.cards > .card:nth-child(3) { transition-delay: .1s; }
-.cards > .card:nth-child(4) { transition-delay: .15s; }
+.cards > .card:nth-child(1):hover { transition-delay: 0s; }
+.cards > .card:nth-child(2):hover { transition-delay: .05s; }
+.cards > .card:nth-child(3):hover { transition-delay: .1s; }
+.cards > .card:nth-child(4):hover { transition-delay: .15s; }
 
 .card-icon {
     width: 42px;
@@ -492,8 +492,8 @@ section {
 }
 
 .featured-card {
-    border-color: rgba(198, 85, 232, .45);
-    background: linear-gradient(180deg, rgba(198, 85, 232, .08), rgba(19, 13, 28, .88));
+    border-color: rgba(198, 85, 232, .18);
+    background: linear-gradient(180deg, rgba(198, 85, 232, .04), rgba(19, 13, 28, .88));
 }
 
 .featured-badge {
@@ -580,14 +580,20 @@ section {
 }
 
 .diff-icon {
-    font-size: 28px;
     margin-bottom: 14px;
-    display: block;
-    transition: transform .25s ease;
+    display: flex;
+    color: var(--violet);
+    transition: transform .25s ease, color .25s ease;
+}
+
+.diff-icon svg {
+    width: 28px;
+    height: 28px;
 }
 
 .diff-item:hover .diff-icon {
-    transform: scale(1.2) rotate(-5deg);
+    transform: scale(1.15) rotate(-5deg);
+    color: var(--fuchsia);
 }
 
 .diff-item h3 {
@@ -682,8 +688,8 @@ section {
 .price-card:nth-child(4) { transition-delay: .15s; }
 
 .price-card.featured {
-    border-color: rgba(198, 85, 232, .55);
-    box-shadow: var(--shadow);
+    border-color: rgba(198, 85, 232, .22);
+    box-shadow: 0 12px 40px rgba(198, 85, 232, .08);
 }
 
 .price-card.featured:hover {
