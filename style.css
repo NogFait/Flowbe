@@ -171,10 +171,7 @@ a {
 
 .hero {
     padding: 82px 0 72px;
-    display: grid;
-    grid-template-columns: 1.12fr .88fr;
-    gap: 52px;
-    align-items: center;
+    max-width: 760px;
 }
 
 .eyebrow {
@@ -421,7 +418,7 @@ section {
 
 .cards {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 18px;
 }
 
@@ -919,13 +916,12 @@ section {
 
 @media (max-width: 900px) {
 
-    .hero,
     .split {
         grid-template-columns: 1fr;
     }
 
     .cards {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .pricing-grid {
@@ -950,7 +946,8 @@ section {
         padding-top: 44px;
     }
 
-    .metric-grid {
+    .cards,
+    .diff-grid {
         grid-template-columns: 1fr;
     }
 
@@ -970,10 +967,6 @@ section {
 
     .project-actions {
         flex-direction: column;
-    }
-
-    .diff-grid {
-        grid-template-columns: 1fr;
     }
 
     .diff-inner {
