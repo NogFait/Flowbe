@@ -477,6 +477,7 @@ section {
 .cards > .card:nth-child(2):hover { transition-delay: .05s; }
 .cards > .card:nth-child(3):hover { transition-delay: .1s; }
 .cards > .card:nth-child(4):hover { transition-delay: .15s; }
+.cards > .card:nth-child(5):hover { transition-delay: .2s; }
 
 .card-icon {
     width: 42px;
@@ -643,6 +644,10 @@ section {
 }
 
 /* Project cards */
+#proyectos .cards {
+    grid-template-columns: repeat(2, 1fr);
+}
+
 .project-card {
     display: flex;
     flex-direction: column;
@@ -685,6 +690,15 @@ section {
 .project-card:hover .project-type {
     transform: scale(1.05);
     background: rgba(232, 85, 155, .16);
+}
+
+.project-img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: calc(var(--radius) - 4px);
+    margin-bottom: 16px;
+    background: var(--bg-elevated);
 }
 
 .button-sm {
@@ -1038,6 +1052,10 @@ section {
 
     .cards,
     .diff-grid {
+        grid-template-columns: 1fr;
+    }
+
+    #proyectos .cards {
         grid-template-columns: 1fr;
     }
 
