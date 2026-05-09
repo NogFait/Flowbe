@@ -648,6 +648,17 @@ section {
     grid-template-columns: repeat(2, 1fr);
 }
 
+#mantenimiento .cards {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+}
+
+#mantenimiento .cards > .card {
+    flex: 1;
+    max-width: 400px;
+}
+
 .project-card {
     display: flex;
     flex-direction: column;
@@ -696,9 +707,14 @@ section {
     width: 100%;
     aspect-ratio: 16 / 9;
     object-fit: cover;
+    object-position: 5% 50%;
     border-radius: calc(var(--radius) - 4px);
     margin-bottom: 16px;
     background: var(--bg-elevated);
+}
+
+.project-img--center {
+    object-position: 50% 50%;
 }
 
 .button-sm {
@@ -1057,6 +1073,15 @@ section {
 
     #proyectos .cards {
         grid-template-columns: 1fr;
+    }
+
+    #mantenimiento .cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #mantenimiento .cards > .card {
+        max-width: 100%;
     }
 
     .price {
