@@ -644,9 +644,16 @@ section {
 }
 
 /* Project cards */
-#proyectos .cards {
-    grid-template-columns: repeat(2, 1fr);
+#proyectos {
+    width: min(1400px, calc(100% - 40px));
+    margin: 0 auto;
 }
+
+#proyectos .cards {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
 
 #mantenimiento .cards {
     display: flex;
